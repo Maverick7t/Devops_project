@@ -14,5 +14,5 @@ Monitoring ensures we have visibility into both **system-level performance** and
 
 
 ![Pipeline Architecture](https://github.com/Maverick7t/Devops_project/raw/main/Phase_4/Screenshot%202025-08-04%20151312.png)
-![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/raw/main/Phase_4/Screenshot%202025-08-04%20151423.png)
+![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/blob/main/Phase_4/Screenshot%202025-08-04%20152256.png)
 
