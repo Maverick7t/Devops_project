@@ -1,103 +1,56 @@
-# Devops_project
+# 🚀 Ultimate CI/CD DevOps Pipeline Project
 
-🚀 Ultimate CI/CD DevOps Pipeline Project
-This repository showcases a complete, production-grade CI/CD pipeline implementation using industry-standard DevOps tools. The project simulates a corporate environment, covering infrastructure setup, secure deployments, and full lifecycle automation of a microservice-based application using Jenkins, Docker, SonarQube, Nexus, Kubernetes, and AWS.
+This repository demonstrates a full-scale **CI/CD DevOps pipeline** implementation tailored for real-world enterprise environments. Built from scratch, the pipeline integrates infrastructure provisioning, secure deployments, quality assurance, and monitoring using the modern DevOps toolchain.
 
-🔧 Tech Stack
-Category	Tools & Services
-Source Control	GitHub (Private Repo)
-CI/CD Orchestration	Jenkins (with scripted pipelines)
-Build Tools	Maven, JDK 17
-Quality & Security	SonarQube, Trivy, CubeAudit
-Artifact Repository	Nexus Repository Manager 3
-Containerization	Docker
-Container Registry	Docker Hub (private/public)
-Orchestration	Kubernetes (multi-node cluster on EC2)
-Monitoring	Prometheus (Node Exporter), Grafana, Blackbox Exporter
-Hosting/Infra	AWS (EC2, VPC, Security Groups, etc.)
+---
 
-🧩 Project Architecture & Phases
-Phase 1: Infrastructure Setup
-Created secure VPC & EC2 instances on AWS
+## 🔧 Tech Stack
 
-Setup Jenkins, SonarQube, Nexus, Docker, and Kubernetes (multi-node)
+| Category            | Tools & Services                             |
+|---------------------|----------------------------------------------|
+| Source Control      | GitHub (Private Repository)                  |
+| CI/CD Orchestration | Jenkins (Scripted Pipelines)                 |
+| Build Tools         | Maven, JDK 17                                |
+| Quality & Security  | SonarQube, Trivy, kubeaudit                  |
+| Artifact Repository | Nexus Repository Manager 3                   |
+| Containerization    | Docker                                       |
+| Container Registry  | Docker Hub                                   |
+| Orchestration       | Kubernetes (Multi-node on AWS EC2)           |
+| Monitoring          | Prometheus, Grafana, Node Exporter, Blackbox Exporter |
+| Infrastructure      | AWS (EC2, VPC, Security Groups)              |
 
-Configured security groups with proper port access
+---
 
-Cluster scanned with kubeaudit for vulnerabilities
+## 🧩 Project Phases
 
-Phase 2: Code Integration
-Cloned private GitHub repository and pushed Java-based microservice
+### Phase 1: Infrastructure Setup
+- Provisioned VPC, Security Groups, and EC2 instances
+- Configured Jenkins, SonarQube, Nexus, and Docker
+- Set up a secure Kubernetes cluster (1 Master + 2 Worker Nodes)
+- Performed cluster security audit using `kubeaudit`
 
-Installed & configured Git, GitHub token-based authentication
+### Phase 2: Source Code Integration
+- Created a **private GitHub repo**
+- Pushed Java-based microservice using Git + Git Bash
+- Token-based GitHub authentication via Jenkins credentials
 
-Phase 3: CI/CD Pipeline Implementation
-Jenkins scripted pipeline stages:
+### Phase 3: CI/CD Pipeline in Jenkins
+Pipeline stages include:
+- 🔄 **Git Checkout**
+- ⚙️ **Code Compilation**: `mvn compile`
+- ✅ **Unit Testing**: `mvn test`
+- 🧹 **SonarQube Code Quality Check**
+- 🛡️ **Trivy FS Scan**: Detect secrets & vulnerable dependencies
+- 📦 **Package & Artifact Upload** to Nexus via `mvn deploy`
+- 🐳 **Docker Image Build, Tag, and Push** to Docker Hub
+- ☸️ **Kubernetes Deployment** of the app
+- 📧 **Email Notifications** for pipeline success/failure
 
-🔄 Git Checkout (secured via GitHub PAT)
+### Phase 4: Monitoring
+- 🔍 **System Monitoring** using Node Exporter + Prometheus + Grafana
+- 🌐 **Website Uptime Monitoring** via Blackbox Exporter
 
-⚙️ Compilation (mvn compile)
+---
 
-✅ Unit Testing (mvn test)
+## 📁 Folder Structure
 
-🔍 Code Quality (SonarQube Scanner)
-
-🛡️ Vulnerability Scans (Trivy - FS + Docker)
-
-📦 Package & Artifact Upload (Nexus via mvn deploy)
-
-🐳 Docker Image Build, Tag, Push
-
-☸️ Kubernetes Deployment
-
-📩 Email Notifications (SMTP via Jenkins)
-
-Phase 4: Monitoring & Observability
-Configured:
-
-Blackbox Exporter for endpoint uptime monitoring
-
-Node Exporter + Prometheus + Grafana for system-level insights
-
-📁 Project Structure
-bash
-Copy
-Edit
-├── Jenkinsfile              # Complete CI/CD pipeline
-├── pom.xml                  # Maven project config
-├── Dockerfile               # Docker build config
-├── src/                     # Source code
-└── scripts/                 # Setup scripts for tools and infrastructure
-🛡️ Security Practices
-Tokens and credentials managed via Jenkins credential store
-
-Private GitHub repo access via PAT
-
-Docker and Kubernetes images scanned using Trivy and kubeaudit
-
-VPC, IAM, and EC2 hardened using AWS best practices
-
-📌 Prerequisites
-AWS account with permissions to manage EC2/VPC
-
-GitHub Personal Access Token
-
-Jenkins admin access
-
-Installed tools: Git, Git Bash, Docker, Jenkins, Java 17, Maven
-
-📬 Notifications & Reporting
-Jenkins email notifications enabled via SMTP (port 465)
-
-HTML vulnerability reports exported from Trivy
-
-SonarQube Quality Gate integrated with Jenkins for code acceptance
-
-💡 Key Learnings
-Real-world simulation of enterprise DevOps pipeline
-
-End-to-end deployment automation on Kubernetes
-
-Security scanning and best practices in CI/CD environments
-
-Monitoring critical infrastructure using Prometheus stack
