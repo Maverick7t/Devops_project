@@ -11,3 +11,8 @@ Monitoring ensures we have visibility into both **system-level performance** and
   - TLS/SSL validity
 
 🎯 *Goal*: Provide 360° visibility of the deployed environment to quickly identify and respond to issues.
+
+
+![Pipeline Architecture](https://github.com/Maverick7t/Devops_project/raw/main/Phase_4/Screenshot%202025-08-04%20151312.png)
+![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/raw/main/Phase_4/Screenshot%202025-08-04%20151423.png)
+
