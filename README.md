@@ -52,5 +52,5 @@ Pipeline stages include:
 
 ---
 
-## 📁 Folder Structure
+
 
