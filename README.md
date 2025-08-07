@@ -21,6 +21,10 @@ This repository demonstrates a full-scale **CI/CD DevOps pipeline** implementati
 
 ---
 
+## 🧩 Project Architecture
+
+![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/blob/main/Phase_1/Screenshot%202025-08-07%20105126.png)
+
 ## 🧩 Project Phases
 
 ### Phase 1: Infrastructure Setup
