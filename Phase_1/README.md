@@ -14,3 +14,7 @@ In this phase, we lay the foundation by provisioning secure, scalable infrastruc
 - Performed a security scan using `kubeaudit` to identify misconfigurations
 
 🎯 *Goal*: Establish a secure, isolated environment to run the DevOps pipeline in a cloud-native manner.
+
+
+
+![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/blob/main/Phase_1/Screenshot%202025-08-07%20105126.png)
