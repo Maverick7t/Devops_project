@@ -17,4 +17,4 @@ In this phase, we lay the foundation by provisioning secure, scalable infrastruc
 
 
 
-![Pipeline Monitoring](https://github.com/Maverick7t/Devops_project/blob/main/Phase_1/Screenshot%202025-08-07%20105126.png)
+
